@@ -1,10 +1,15 @@
 type ButtonType = {
     name: string;
     callBack: () => void;
+    isDisabled: boolean;
 };
-export const Button = (props: ButtonType) => {
+export const Button = ({ name, callBack, isDisabled }: ButtonType) => {
     const onClickHandler = () => {
-        props.callBack();
+        callBack();
     };
-    return <button onClick={onClickHandler}> {props.name} </button>;
+    return (
+        <button disabled={isDisabled} onClick={onClickHandler}>
+            {name}
+        </button>
+    );
 };
