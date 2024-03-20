@@ -1,7 +1,6 @@
 .App {
     background-color: #2a2c36;
     display: flex;
-    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -25,7 +24,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 250%;
+    font-size: 40px;
     font-weight: bold;
     border-radius: 5px;
 }
@@ -56,4 +55,11 @@ Button:active {
 }
 Button:disabled {
     opacity: 0.4;
+    background-color: #6ee3fe;
+    border: 2px solid #6ee3fe;
+    color: #2a2c36;
+}
+.maxNumber {
+    color: red;
+    font-size: 50px;
 }

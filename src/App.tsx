@@ -10,23 +10,30 @@ function App() {
     const onClickHandlerCountZero = () => {
         setCount((count = 0));
     };
-    const isDisabled = count < 5 ? false : true;
+    const isDisabledInc = count < 5 ? false : true;
+    const isDisabledReset = count === 0 ? true : false;
 
     return (
         <div className="App">
             <div className="counter">
-                <div className="scoreboard">{count}</div>
+                <div className="scoreboard">
+                    {count < 5 ? (
+                        <p>{count}</p>
+                    ) : (
+                        <p className="maxNumber">{count}</p>
+                    )}
+                </div>
 
                 <div className="buttons">
                     <Button
                         name={'inc'}
                         callBack={onClickHandlerCount}
-                        isDisabled={isDisabled}
+                        isDisabled={isDisabledInc}
                     />
                     <Button
                         name={'reset'}
                         callBack={onClickHandlerCountZero}
-                        isDisabled={!isDisabled}
+                        isDisabled={isDisabledReset}
                     />
                 </div>
             </div>
