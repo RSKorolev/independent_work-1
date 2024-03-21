@@ -17,13 +17,8 @@ function App() {
         <div className="App">
             <div className="counter">
                 <div className="scoreboard">
-                    {count < 5 ? (
-                        <p>{count}</p>
-                    ) : (
-                        <p className="maxNumber">{count}</p>
-                    )}
+                    <p className={count < 5 ? '' : 'maxNumber'}>{count}</p>
                 </div>
-
                 <div className="buttons">
                     <Button
                         name={'inc'}
